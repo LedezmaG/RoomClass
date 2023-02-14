@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap");
+
+:root {
+  /* Colors */
+  --background: #f6f6f4;
+  --background-diseable: #dbd9d2;
+
+  --primary: #d99536;
+  --primary-hard: #d99536;
+  --primary-medium: #e7b75f;
+  --primary-lite: #fdf8ea;
+  
+  --secondary: #007c89;
+  --secondary-hover: #006570;
+  
+  --danger: #fc4b6c;
+
+  --red: #c21010;
+  --grey: #efeeea;
+  --holder: #a1acb8;
+
+  --txt: #241c15;
+  --txt-lite: #566a7f;
+}
+
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html, body {
+  background-color: var(--background);
+  font-family: "Inter Tight", sans-serif;
+  height: 100%;
+  color: var(--txt-lite);
+}
+
+a {
+  color: var(--txt);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: normal;
+}
+
+.center-center {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+/* Form control */
+.form-control {
+  border-radius: 0px;
+}
+.form-control:focus {
+  border-color: var(--secondary) !important;
+  box-shadow: inset 0 0 0 1px var(--secondary);
+}
+.form-select{
+  border-radius: 0px;
+}
+.form-select:focus {
+  border-color: var(--secondary) !important;
+  box-shadow: inset 0 0 0 1px var(--secondary);
+}
+.error-msg {
+  color: var(--red);
+  font-size: small;
+  letter-spacing: 1px;
+}
+/* Button */
+.btn-primary {
+  background-color: var(--secondary);
+  border: 1px solid transparent;
+  color: var(--background);
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  letter-spacing: 1px;
+  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+}
+.btn-primary:first-child:hover,
+:not(.btn-check) + .btn-primary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border: 1px solid transparent;
+  color: var(--background);
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  letter-spacing: 1px;
+  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.btn-secondary:first-child:hover,
+:not(.btn-check) + .btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  border: 1px solid transparent;
+  color: var(--background);
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  letter-spacing: 1px;
+  font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.btn-danger:first-child:hover,
+:not(.btn-check) + .btn-danger:hover {
+  opacity: 0.8;
+}
+
+
+/* Box for groups */
+
+.gp-box {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
+  -webkit-box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
+  color: #fff;
+}
+
+.gp-box h3 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  white-space: nowrap;
+  padding: 0;
+}
+.gp-box p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.gp-box .inner {
+  padding: 10px 10px 0 10px;
+}
+.gp-box .icon {
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 0;
+  font-size: 72px;
+  color: rgba(0, 0, 0, .15);
+}
+.gp-box:hover .icon {
+  font-size: 78px;
+}
+.gp-box .gp-box-footer {
+  position: relative;
+  text-align: right;
+  padding: 3px 10px;
+  color: #fff;
+  color: rgba(255, 255, 255, .8);
+  display: block;
+  z-index: 10;
+  background: rgba(0, 0, 0, .1);
+  text-decoration: none;
+}
+
+/* Box for studenst */
+.st-box{
+  position: relative;
+  border-top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  background: #fff;
+  border-radius: 0;
+  padding: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #dce3e6;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 5px 20px rgb(0 0 0 / 5%);
+  box-shadow: 0px 5px 20px rgb(0 0 0 / 5%);
+  padding: 5px;
+}
+
+.st-box .box-body {
+  padding: 1.25rem;
+  flex: 1 1 auto;
+  text-align: center
+}
+.st-box .avatar {
+  position: relative;
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  line-height: 96px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #f5f6f7;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.st-box .box-float-end {
+  position: absolute;
+  right: 10px;
+}
+.st-box .box-float-end i {
+  color: var(--txt-lite);
+}
+.st-box .box-float-start {
+  position: absolute;
+  left: 10px;
+}
+.st-box .box-float-start i {
+  color: var(--txt-lite);
+}
+
+/* Teams box */
+.tm-box {
+  position: relative;
+  border-top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  background: var(--background);
+  border-radius: 0;
+  padding: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #dce3e6;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 5px 20px rgb(0 0 0 / 5%);
+  box-shadow: 0px 5px 20px rgb(0 0 0 / 5%);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.tm-box:hover {
+  background: var(--background-diseable);
+}
+
+.tm-box .title {
+  font-size: 4.286rem;
+  line-height: 1.2;
+}
+
+/* Team list */
+.tl-box{
+  position: relative;
+  border-top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  background: #fff;
+  border-radius: 0;
+  padding: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #dce3e6;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 5px 20px rgb(0 0 0 / 5%);
+  box-shadow: 0px 5px 20px rgb(0 0 0 / 5%);
+}
+
+.tl-box .box-header.with-border {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.tl-box .box-header {
+  color: #455a64;
+  display: block;
+  padding: 0.8rem 1.25rem;
+  position: relative;
+  border-bottom: 1px solid rgba(97, 106, 120, 0.07);
+}
+.tl-box .box-body {
+  padding: 1.25rem;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.tl-box .media-list .media-list {
+  border-bottom: 1px solid rgba(97, 106, 120, 0.07);
+}
+.tl-box .media-list-divided > .media:not(.media-list-header):not(.media-list-footer), .media-list-divided .media-list-body > .media {
+  border-bottom: 1px solid rgba(97, 106, 120, 0.07);
+}

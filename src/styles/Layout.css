@@ -1,0 +1,26 @@
+.main-content {
+    height: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    left: 15%;
+    position: absolute;
+    height: 100%;
+    padding-top: 25px;
+}
+
+footer {
+    color: rgba(36, 28, 21, 0.65);
+    text-align: center !important;
+    font-size: small;
+    text-align: initial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
